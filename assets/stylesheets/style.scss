@@ -1,0 +1,8 @@
+@use '../stylesheets/1_abstracts' as *; // Configuration and helpers
+@use '../stylesheets/2_vendors' as *; // Vendors
+@use '../stylesheets/3_base' as *; // Base stuff
+@use '../stylesheets/4_layout' as *; // Layout-related sections
+@use '../stylesheets/5_components' as *; // Components
+@use '../stylesheets/6_pages' as *; // Page-specific styles
+@use '../stylesheets/7_themes' as *; // Themes
+@use '../stylesheets/8_vendors-extensions' as *; // Vendors extensions

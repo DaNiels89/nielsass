@@ -10,7 +10,7 @@ $info: hsl(46, 92%, 54%);
 $white: hsla(360, 100%, 100%, 1);
 $black: hsla(0, 0%, 0%, 1);
 
-// Color palette
+// Color palette, used mixins
 $colors: (
 	"primary": $primary,
 	"secondary": $secondary,
@@ -19,6 +19,31 @@ $colors: (
 	"white": $white,
 	"black": $black,
 );
+
+// Breakpoints map for response design, used mixins
+$breakpoints: (
+	"xs": 0,
+	"sm": 480px,
+	"md": 720px,
+	"lg": 9600px,
+	"xl": 1200px,
+	"xxl": 1400px,
+);
+
+// For grid
+$grid-columns: 12;
+$grid-gaps: (
+	"0": 0,
+	"1": 10px,
+	"2": 20px,
+	"3": 30px,
+);
+
+// Justify content layout, Helper
+$layout-justify-values: flex-start, center, flex-end, space-between,
+	space-around;
+// Align items layout, Helper
+$layout-align-values: flex-start, center, flex-end;
 
 // Spacing
 $base-padding: 0.75rem;

@@ -1,3 +1,12 @@
+@use '../1_abstracts/variables' as *;
+
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass functions.
 // -----------------------------------------------------------------------------
+
+// For buttons
+@function light-comp($color) {
+	$complement: complement($color);
+	$light-complement: lighten($complement, 20%);
+	@return $light-complement;
+}

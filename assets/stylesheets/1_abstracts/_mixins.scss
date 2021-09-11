@@ -1,3 +1,66 @@
+@use '../1_abstracts/variables' as *;
+
 // -----------------------------------------------------------------------------
 // This file contains all application-wide Sass mixins.
 // -----------------------------------------------------------------------------
+
+// Breakpoints
+@mixin xs {
+	@media (min-width: map-get($breakpoints, "xs")) {
+		@content;
+	}
+}
+
+@mixin sm {
+	@media (min-width: map-get($breakpoints, "sm")) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media (min-width: map-get($breakpoints, "md")) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media (min-width: map-get($breakpoints, "lg")) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media (min-width: map-get($breakpoints, "xl")) {
+		@content;
+	}
+}
+
+@mixin xxl {
+	@media (min-width: map-get($breakpoints, "xxl")) {
+		@content;
+	}
+}
+
+@mixin breakpoint($bp: 0) {
+	@media (min-width: $bp) {
+		@content;
+	}
+}
+
+// For columns
+@mixin col() {
+	box-sizing: border-box;
+	flex-grow: 0;
+}
+
+// Buttons
+@mixin btn($bg-color: $white) {
+	text-decoration: none;
+	cursor: pointer;
+	display: inline-block;
+	border: 0;
+	padding-block: $base-padding;
+	padding-inline: $base-padding * 2;
+	border-radius: $base-border-radius;
+	background-color: $bg-color;
+}

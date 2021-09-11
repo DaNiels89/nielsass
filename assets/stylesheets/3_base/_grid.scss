@@ -1,0 +1,87 @@
+@use 'sass:math';
+@use '../1_abstracts' as *;
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the breakpoints/grid
+// of the site/application.
+// -----------------------------------------------------------------------------
+
+// Base layout classes
+.container {
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 1.25rem;
+	box-sizing: border-box;
+}
+
+.row {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+// Grid gaps
+@each $key, $val in $grid-gaps {
+	.gap-#{$key} > * {
+		padding: $val;
+	}
+	.gap-#{$key} {
+		margin-left: -$val;
+		margin-right: -$val;
+	}
+}
+
+// Column classes
+@include xs {
+	@for $i from 1 through $grid-columns {
+		.col-xs-#{$i} {
+			@include col();
+			width: math.div($i * 100%, $grid-columns);
+		}
+	}
+}
+
+@include sm {
+	@for $i from 1 through $grid-columns {
+		.col-sm-#{$i} {
+			@include col();
+			width: math.div($i * 100%, $grid-columns);
+		}
+	}
+}
+
+@include md {
+	@for $i from 1 through $grid-columns {
+		.col-md-#{$i} {
+			@include col();
+			width: math.div($i * 100%, $grid-columns);
+		}
+	}
+}
+
+@include lg {
+	@for $i from 1 through $grid-columns {
+		.col-lg-#{$i} {
+			@include col();
+			width: math.div($i * 100%, $grid-columns);
+		}
+	}
+}
+
+@include xl {
+	@for $i from 1 through $grid-columns {
+		.col-xl-#{$i} {
+			@include col();
+			width: math.div($i * 100%, $grid-columns);
+		}
+	}
+}
+
+@include xxl {
+	@for $i from 1 through $grid-columns {
+		.col-xxl-#{$i} {
+			@include col();
+			width: math.div($i * 100%, $grid-columns);
+		}
+	}
+}
